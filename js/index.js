@@ -8,7 +8,6 @@ document.getElementById("btn").addEventListener("click", function() {
   fetch("http://www.boredapi.com/api/activity/")
   .then(response => response.json())
   .then(data => {
-    console.log(data)
     changableText.classList.add("api_changes")      
     changableText.textContent = data.activity 
     document.getElementById("title").textContent = "💡Look what I found💡"
