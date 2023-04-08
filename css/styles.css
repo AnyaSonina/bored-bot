@@ -1,0 +1,143 @@
+/**
+Challenge: 
+
+- Add some styling! Be creative, play with layout a bit
+  (Spoiler: I'm going to use a single-column flexbox layout)
+  add some color, grab a font from Google fonts - whatever
+  you'd like!
+*/
+
+body {
+  height: 100vh;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;  
+  background: rgba(255, 176, 5, 0.815);
+  background-image: url(../images/frame-with-ligh-bulb-set1.jpg);  
+  background-size:cover; 
+  background-position: center center;
+  background-repeat: no-repeat;  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 60%;
+  min-width: 305px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-style: italic;  
+  color: white;
+}
+
+.api_changes {
+  animation: color 1s;
+}
+
+#btn {
+  padding: 2em 2.5em;
+  margin-top: 2em;
+  border-radius: 50%;
+  border:none;
+  background-color: brown;
+  cursor: pointer;
+  background-image: radial-gradient(circle 50px, rgb(255, 255, 0, 0.5), rgb(165, 42, 42, 0.5));
+  
+}
+
+#btn:hover,
+#btn:focus {
+  background-color:rgb(218, 54, 54);
+  background-image: radial-gradient(circle 50px, rgb(255, 255, 0, 0.5), rgb(218, 54, 54, 0.5));
+  transform: scale(1.1);
+}
+
+#btn:active {
+  transform: scale(1);
+  background-image: radial-gradient(circle 50px, rgb(255, 255, 0, 0.5), rgb(165, 42, 42, 0.5));
+}
+
+.fa-lightbulb {
+  font-size: 2rem;
+  color: yellow;
+}
+
+@keyframes color {
+  from {
+    color: black;
+  }
+
+  to {
+    color: white;
+  }
+}
+
+@keyframes color_small {
+  from {
+    color: #ffe100;
+  }
+
+  to {
+    color:black;
+  }
+}
+
+@media all and (max-width:700px) {
+  body {
+    height: 100vh;
+    background-image: url(../images/frame-with-ligh-bulb-set_2_50.jpg);
+    background-size: cover; 
+    font-size: 0.7rem;
+  }
+
+  .container {
+    background-color: white;
+    border-radius: 1em;
+    padding: 0 3em;
+    box-shadow: 5px 5px 10px grey;
+
+  }
+
+  h1 {
+    font-size: 1.7rem;    
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  p {
+    font-size: .7rem;
+  }
+
+  #btn {
+    padding: 1.5em 2em;    
+  }
+
+  .fa-lightbulb {
+    font-size: 1.7rem;    
+  }
+
+  .api_changes {
+    animation: color_small 3s;
+  }
+}
