@@ -5,7 +5,7 @@ document.getElementById("btn").addEventListener("click", function() {
   changableText.classList.remove("api_changes")  
   subtitle.remove(subtitle)
 
-  fetch("http://www.boredapi.com/api/activity/")
+  fetch("https://www.boredapi.com/api/activity/")
   .then(response => response.json())
   .then(data => {
     changableText.classList.add("api_changes")      
